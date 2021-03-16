@@ -24,13 +24,13 @@ class Record():
                 if not self.check_repeated_values():
                     self.record = self.create_new_record()
                     return self.record
-        
         else:
             raise CustomValidation(
                 _("Debe proporcionar campo de Valor"),
                 "Keys",
                 status.HTTP_400_BAD_REQUEST,
             )
+            
     def create_new_record(self):
         self.increment_version()
         new_record = {"key": self.key_id, "value": self.new_value, "version": VERSION }

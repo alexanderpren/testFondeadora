@@ -61,9 +61,6 @@ def get_record_by_key_and_version(key_id,version):
                 "Keys",
                 status.HTTP_400_BAD_REQUEST,
             )
-            
-
-       
 
 def find_closest_version_smaller(array, version):
     tmp_record = None
@@ -72,9 +69,7 @@ def find_closest_version_smaller(array, version):
             tmp_record = current_index
     return tmp_record
              
-             
-    
-    
+
 
 def iterate_array(key_id):
     temp_array = []
@@ -118,3 +113,4 @@ class CustomValidation(APIException):
     
 def get_list():
     new_list = ARRAY_KEYS
+    return new_list

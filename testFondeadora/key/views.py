@@ -38,7 +38,7 @@ class KeyViewSet(viewsets.ViewSet):
 
 class GetKeyViewSet(viewsets.ViewSet):
      def get(self, request, string):
-        print("Hola")
+        print("Hola Mundo!")
 
 
 class GetListKeyViewSet(viewsets.ViewSet):

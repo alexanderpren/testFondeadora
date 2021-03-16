@@ -1,21 +1,37 @@
 {
-    // Use IntelliSense para saber los atributos posibles.
-    // Mantenga el puntero para ver las descripciones de los existentes atributos.
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-  
-        {   
-            "name": "Django Python",
-            "type":"python",
-            "request": "launch",
-            "python": "/home/linux-pc/Documentos/fondeadora/testEnv/bin/python",
-            "program": "${workspaceFolder}/testFondeadora/manage.py",
-            "args": [
-                "runserver",
-                "--noreload"
-            ],
-            "django": true
-        },
-    ]
+  // Use IntelliSense para saber los atributos posibles.
+  // Mantenga el puntero para ver las descripciones de los existentes atributos.
+  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Archivo actual",
+      "type": "python",
+      "request": "launch",
+      "python": "/home/linux-pc/Documentos/fondeadora/testEnv/bin/python",
+      "program": "${workspaceFolder}/testFondeadora/manage.py",
+      "console": "integratedTerminal",
+      "args": ["test"]
+    },
+
+    {
+      "name": "Django Python",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "python": "/home/linux-pc/Documentos/fondeadora/testEnv/bin/python",
+      "program": "${workspaceFolder}/testFondeadora/manage.py",
+      "args": ["runserver", "--no-color", "--noreload"],
+
+      "django": true
+    },
+    {
+      "name": "TEST Python Django",
+      "type": "python",
+      "request": "launch",
+      "python": "/home/linux-pc/Documentos/fondeadora/testEnv/bin/python",
+      "program": "${workspaceFolder}/testFondeadora/manage.py",
+      "args": ["test"]
+    }
+  ]
 }
