@@ -11,4 +11,5 @@ key_options = views.KeyViewSet.as_view({
 urlpatterns = [
    	path('keys/', key_options, name='keys_api'),
     path('keys/<str:string>/', views.GetKeyViewSet.as_view({'get':'get'}), name='get_by_key'),
+    path('list_keys/', views.GetListKeyViewSet.as_view({'get':'get'}), name='list_key'),
 ]
