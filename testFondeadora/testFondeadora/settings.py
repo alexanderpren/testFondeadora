@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'testFondeadora.urls'
+APPEND_SLASH=False
 
 TEMPLATES = [
     {

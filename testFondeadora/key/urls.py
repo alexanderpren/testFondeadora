@@ -2,13 +2,13 @@ from django.urls import path, include
 from rest_framework import routers
 from key import views
 
-""" key_options = views.KeyViewSet.as_view({
+
+key_options = views.KeyViewSet.as_view({
 	'put':'put',
-	'post':'create'
-}) """
+	'get':'get'
+}) 
 
 urlpatterns = [
-   	path('keys/', views.KeyViewSet.as_view({'put': 'put'}), name='keys_api'),
-    		
-
+   	path('keys/', key_options, name='keys_api'),
+    path('keys/<str:string>/', views.GetKeyViewSet.as_view({'get':'get'}), name='get_by_key'),
 ]
