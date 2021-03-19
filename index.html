@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function getKey() {
+        var inputVal = document.getElementById("key").value;
+        let formData = new FormData();
+        formData.append(inputVal, '');
+
+        fetch('http://127.0.0.1:8000/api/operations/keys/', {
+          //method: "GET",
+          mode : 'same-origin',
+          credentials: 'same-origin' ,
+          body: formData,
+          headers: { "Content-type": "application/json;charset=UTF-8" },
+        })
+          // Handle success
+          .then((response) => alert(response.json())) // convert to json
+          .then((json) => console.log(json)) //print data to console
+          .catch((err) => console.log("Request Failed", err)); // Catch errors
+      }
+    </script>
+  </head>
+  <body>
+    <label for="fname">Ingresar llave:</label>
+    <input type="text" id="key" name="key" /><br /><br />
+    <input type="submit" value="Submit" onclick="getKey()" />
+  </body>
+</html>
